@@ -8,11 +8,13 @@ import Dashboard from "../components/Dashboard"
 const AppRoutes = () => {
   return (
     <Routes>
-        <Route path="/" element={<SignIn/>}/>
-        <Route path="/signup" element={<SignUp/>}/>
-        <Route path="/forgot-password" element={<ForgotPassword/>}/>
-        <Route path="/verify-otp" element={<VerifyOTP/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
+      <Route path="/">
+        <Route index element={<SignIn/>}/>
+        <Route path="signup" element={<SignUp/>}/>
+        <Route path="forgot-password" element={<ForgotPassword/>}/>
+        <Route path="verify-otp" element={<VerifyOTP/>}/>
+        <Route path="dashboard" element={<Dashboard/>}/>
+      </Route>
     </Routes>
   )
 }
